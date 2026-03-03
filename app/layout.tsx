@@ -47,9 +47,6 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-            <head>
-              <meta name="google-site-verification" content="Iwx-goyFnuZmay-TclhWigYNnwirnsJUedhAMwsKHQk" />
-            </head>
 
       <body className={`${outfit.variable} antialiased`}>
         <Navbar />
