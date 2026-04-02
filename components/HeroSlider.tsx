@@ -87,7 +87,7 @@ export default function HeroSlider() {
                                     {slide.subtitle}
                                 </p>
                                  {slide.description && (
-        <p className="text-base md:text-lg text-gray-300 max-w-xl mx-auto">
+        <p className="text-base md:text-lg text-gray-300 max-w-xl mx-auto whitespace-pre-line">
             {slide.description}
         </p>
     )}
