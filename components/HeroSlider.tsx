@@ -21,7 +21,7 @@ const defaultSlides = [
         id: "2",
         image_url: "/assets/sliderimages/2.jpg",
         title: "Professional Residential & Commercial Cleaning in Miami Lakes",
-        description: "From deep cleaning to office maintenance, we keep your space clean, safe, and stress-free./n✔ House Cleaning ✔ Office & Janitorial Services ✔ Move-In / Move-Out Cleaning",
+        description: "From deep cleaning to office maintenance, we keep your space clean, safe, and stress-free.\n✔ House Cleaning ✔ Office & Janitorial Services ✔ Move-In / Move-Out Cleaning",
         cta_text: "Schedule Cleaning Today",
         cta_link: "/services"
     },
@@ -29,7 +29,7 @@ const defaultSlides = [
         id: "3",
         image_url: "/assets/sliderimages/3.jpg",
         title: "Trusted Cleaning Experts Serving Miami Since 2013",
-        description: "Join hundreds of satisfied clients who rely on us for consistent, high-quality cleaning services./n✔ 100% Satisfaction Guarantee ✔ Background-Checked Professionals ✔ Affordable & Transparent Pricing",
+        description: "Join hundreds of satisfied clients who rely on us for consistent, high-quality cleaning services.\n✔ 100% Satisfaction Guarantee ✔ Background-Checked Professionals ✔ Affordable & Transparent Pricing",
         cta_text: "Call Now for Instant Booking",
         cta_link: "/contact"
     }
