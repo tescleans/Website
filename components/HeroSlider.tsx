@@ -82,7 +82,7 @@ export default function HeroSlider() {
 
                         <div className="absolute inset-0 flex items-center justify-center text-center">
                             <div className="container px-6 space-y-6 max-w-4xl animate-in fade-in zoom-in duration-1000">
-                            <h2 className="text-[32px] md:text-[40px] lg:text-[56px] leading-tight font-bold tracking-tight text-white drop-shadow-md">                                    {slide.title}
+                            <h2 className="text-[32px] md:text-[36px] lg:text-[46px] leading-tight font-bold tracking-tight text-white drop-shadow-md">                                    {slide.title}
                                 </h2>
                                 <p className="text-xl md:text-2xl text-gray-200 drop-shadow-sm max-w-2xl mx-auto font-light">
                                     {slide.subtitle}
