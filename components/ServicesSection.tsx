@@ -5,7 +5,7 @@ import Link from "next/link"
 const services = [
     {
         icon: Building2,
-        title: "Commercial Cleaning",
+        title: "Residential House Cleaning Miami",
         description: "Professional cleaning for offices, retail stores, and commercial spaces."
     },
     {
@@ -56,9 +56,9 @@ export default function ServicesSection() {
             <div className="container mx-auto px-6">
                 <div className="text-center max-w-2xl mx-auto mb-16">
                     <span className="text-primary font-semibold uppercase tracking-wide">Our Services</span>
-                    <h2 className="text-3xl md:text-4xl font-bold mt-2 text-primary">Everything You Need for a Cleaner Space</h2>
+                    <h2 className="text-3xl md:text-4xl font-bold mt-2 text-primary">Our Same-Day Cleaning Services in Miami Include</h2>
                     <p className="mt-4 text-muted-foreground">
-                        We offer a wide range of professional cleaning services tailored to your specific needs.
+                    Whether you need a one-time refresh or ongoing professional maintenance, we have a cleaning solution tailored to your needs.
                     </p>
                 </div>
 
