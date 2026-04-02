@@ -23,15 +23,24 @@ export default function IntroSection() {
                     {/* Right: Text Content */}
                     <div className="w-full md:w-1/2 space-y-6">
                         <span className="text-primary/70 font-semibold tracking-wider uppercase">About Us</span>
-                        <h2 className="text-3xl md:text-5xl font-bold text-primary leading-tight">
-                            Cleaning with a <span className="text-secondary-foreground underline decoration-secondary decoration-4 underline-offset-4">Spirit of Excellence</span>
+                        <h2 className="text-3xl md:text-5xl font-bold text-primary leading-tight">More Than a Cleaning Company | We're Miami's Home & Business Care Partners
                         </h2>
                         <p className="text-muted-foreground text-lg leading-relaxed">
-                            Total Excellence Services, Inc. was founded in April of 2008 and since 2013 we have been providing professional cleaning services for residential & commercial buildings.
+                        We didn't start Total Excellence Services, Inc., because we saw a business opportunity. We started it because we saw a real problem: Miami families and business owners were struggling to find a cleaning service they could truly trust, one that showed up on time, did the job thoroughly, and treated their space with the same respect they would their own.
                         </p>
                         <p className="text-muted-foreground leading-relaxed">
-                            Our Company’s goal is to professionally clean and service each of our customer’s facilities and buildings to the best of our abilities and in the highest standard possible.
+So we built that company from the ground up.
                         </p>
+                        <p className="text-muted-foreground leading-relaxed">
+Since 2013, we have completed over 10,000 professional cleaning jobs across Miami-Dade County. We've cleaned everything from cozy Brickell studios to sprawling Coral Gables estates, from busy Downtown Miami law offices to high-traffic Wynwood retail spaces. That real-world experience shapes everything we do.                        </p>
+                         <p className="text-muted-foreground leading-relaxed">
+Our team isn't just trained, they're passionate. Every cleaner goes through a rigorous background check, hands-on training program, and ongoing quality reviews. We hold ourselves to a higher standard because we know that when you invite us into your space, you're placing your trust in us. We never take that lightly.
+                        </p>
+                         <p className="text-muted-foreground leading-relaxed">
+We are proud members of the Miami business community. We hire locally, give back locally, and operate with the kind of accountability and transparency that only a truly local company can offer.
+                        </p>
+
+                        
                         <div className="pt-4">
                             <Link href="/about">
                                 <Button variant="outline" size="lg">Learn More About Us</Button>
