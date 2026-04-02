@@ -28,9 +28,9 @@ const defaultSlides = [
     {
         id: "3",
         image_url: "/assets/sliderimages/3.jpg",
-        title: "Professional Staff",
-        subtitle: "Trained, Insured, and dedicated to your satisfaction.",
-        cta_text: "Contact Us",
+        title: "Trusted Cleaning Experts Serving Miami Since 2013",
+        description: "Join hundreds of satisfied clients who rely on us for consistent, high-quality cleaning services./n✔ 100% Satisfaction Guarantee ✔ Background-Checked Professionals ✔ Affordable & Transparent Pricing",
+        cta_text: "Call Now for Instant Booking",
         cta_link: "/contact"
     }
 ]
