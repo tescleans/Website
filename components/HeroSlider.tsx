@@ -12,9 +12,8 @@ const defaultSlides = [
     {
         id: "1",
         image_url: "/assets/sliderimages/1.jpg",
+        title: "Top-Rated Same-Day Cleaning Services in Miami Lakes, South Florida",
         subtitle: "Serving South Florida Since 2008. Professional, Reliable, & Detailed.",
-        title: "Top-Rated Same-Day Cleaning Services in Miami, Florida",
-        description: "Need cleaning today? Our expert team delivers fast, reliable, and spotless results for homes and businesses across Miami. Book now and experience top-rated service you can trust.",
         cta_text: "Book Now",
         cta_link: "/book"
     },
@@ -88,6 +87,11 @@ export default function HeroSlider() {
                                 <p className="text-xl md:text-2xl text-gray-200 drop-shadow-sm max-w-2xl mx-auto font-light">
                                     {slide.subtitle}
                                 </p>
+                                 {slide.description && (
+        <p className="text-base md:text-lg text-gray-300 max-w-xl mx-auto">
+            {slide.description}
+        </p>
+    )}
                                 <div className="pt-8">
                                     <Link href={slide.cta_link || slide.link || "/book"}>
                                         <Button size="lg" className="text-lg px-8 py-6 rounded-full shadow-lg hover:shadow-xl transition-all hover:scale-105 bg-white text-primary hover:bg-gray-100">
