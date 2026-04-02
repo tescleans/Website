@@ -12,8 +12,9 @@ const defaultSlides = [
     {
         id: "1",
         image_url: "/assets/sliderimages/1.jpg",
-        title: "Cleaning with a Spirit of Excellence",
         subtitle: "Serving South Florida Since 2008. Professional, Reliable, & Detailed.",
+        title: "Top-Rated Same-Day Cleaning Services in Miami, Florida",
+        description: "Need cleaning today? Our expert team delivers fast, reliable, and spotless results for homes and businesses across Miami. Book now and experience top-rated service you can trust.",
         cta_text: "Book Now",
         cta_link: "/book"
     },
