@@ -84,7 +84,7 @@ export default function HeroSlider() {
                             <div className="container px-6 space-y-6 max-w-4xl animate-in fade-in zoom-in duration-1000">
                             <h2 className="text-[32px] md:text-[36px] lg:text-[46px] leading-tight font-bold tracking-tight text-white drop-shadow-md">                                    {slide.title}
                                 </h2>
-                                <p className="text-xl md:text-2xl text-gray-200 drop-shadow-sm max-w-2xl mx-auto font-light">
+                                <p className="text-base md:text-lg text-gray-400 max-w-xl mx-auto">
                                     {slide.subtitle}
                                 </p>
                                  {slide.description && (
