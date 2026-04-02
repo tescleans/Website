@@ -12,7 +12,7 @@ const defaultSlides = [
     {
         id: "1",
         image_url: "/assets/sliderimages/1.jpg",
-        title: "Cleaning with a Spirit of Excellence - test",
+        title: "Cleaning with a Spirit of Excellence",
         subtitle: "Serving South Florida Since 2008. Professional, Reliable, & Detailed.",
         cta_text: "Book Now",
         cta_link: "/book"
