@@ -13,7 +13,8 @@ const defaultSlides = [
         id: "1",
         image_url: "/assets/sliderimages/1.jpg",
         title: "Top-Rated Same-Day Cleaning Services in Miami Lakes, South Florida",
-        description: "Looking for same-day cleaning? Our experienced professionals deliver quick, reliable, and immaculate results for residential and commercial spaces.",
+        description: "Looking for same-day cleaning? Our experienced professionals deliver quick, reliable, and immaculate results for residential and commercial spaces.
+            <br> ✔ Same-Day Availability, ✔ Residential & Commercial Cleaning, ✔ Trusted Since 2013",
         subtitle: "✔ Same-Day Availability, ✔ Residential & Commercial Cleaning, ✔ Trusted Since 2013",
         cta_text: "Book Now",
         cta_link: "/book"
