@@ -1,0 +1,47 @@
+import Link from "next/link"
+
+const areas = [
+    "Miami", "Miami Beach", "Brickell", "Downtown Miami", "Coral Gables",
+    "Coconut Grove", "Wynwood", "Edgewater", "Little Havana", "Kendall",
+    "Doral", "Hialeah", "Sweetwater", "South Miami", "Pinecrest",
+    "Key Biscayne", "North Miami", "North Miami Beach", "Aventura", "Homestead",
+    "Cutler Bay", "Opa-locka", "West Miami", "Virginia Gardens",
+]
+
+export default function ServiceAreas() {
+    return (
+        <section className="py-20 bg-gray-50">
+            <div className="container mx-auto px-6">
+                <div className="text-center max-w-2xl mx-auto mb-12">
+                    <span className="text-primary font-semibold uppercase tracking-wide">Service Areas</span>
+                    <h2 className="text-3xl md:text-4xl font-bold mt-2 text-primary">Proudly Serving Miami and All Surrounding Communities</h2>
+                    <p className="mt-4 text-muted-foreground">
+                        As a dedicated cleaning services company in Miami, we cover the full Miami-Dade area and beyond.
+                    </p>
+                </div>
+
+                <div className="bg-white rounded-2xl border border-gray-100 shadow-sm p-8 md:p-10">
+                    <p className="text-primary font-semibold mb-6 text-center">Our primary service areas include:</p>
+                    <div className="flex flex-wrap justify-center gap-3">
+                        {areas.map((area, index) => (
+                            <span
+                                key={index}
+                                className="px-4 py-2 bg-secondary/20 text-primary font-medium rounded-full text-sm hover:bg-primary hover:text-white transition-colors cursor-default"
+                            >
+                                {area}
+                            </span>
+                        ))}
+                    </div>
+
+                    <p className="mt-8 text-center text-muted-foreground text-sm">
+                        Not sure if we reach your neighborhood?{" "}
+                        <Link href="tel:" className="text-primary font-semibold hover:underline decoration-2 underline-offset-4">
+                            Give us a call
+                        </Link>
+                        . We're constantly expanding our coverage and will always try to accommodate new areas.
+                    </p>
+                </div>
+            </div>
+        </section>
+    )
+}
