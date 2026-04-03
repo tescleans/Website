@@ -5,8 +5,15 @@ import Link from "next/link"
 const services = [
     {
         icon: Building2,
-        title: "Residential House Cleaning Miami",
-        description: "Professional cleaning for offices, retail stores, and commercial spaces."
+        title: "🏠 Residential House Cleaning Miami",
+        description: "Your home should be your retreat, not another chore on your to-do list. Our residential house cleaning in Miami covers every inch of your living space with precision and care. /n What we cover:
+/nFull kitchen cleaning, countertops, stovetop, sink, exterior appliances/n
+Bathroom sanitization toilets, showers, tubs, mirrors, floors
+Bedroom dusting, vacuuming, and linen changes (on request)
+Living area dusting, wiping, and floor care
+Interior windows, baseboards, and light switches
+Available as one-time, weekly, bi-weekly, or monthly visits.
+"
     },
     {
         icon: Home,
