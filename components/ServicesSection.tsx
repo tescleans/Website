@@ -1,4 +1,4 @@
-import { Shield, Home, Hammer, Sparkles, Building2, Grid } from "lucide-react"
+import { Shield, Home, Hammer, Sparkles, Building2, Grid, Leaf, PackageOpen } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import Link from "next/link"
 
@@ -6,14 +6,7 @@ const services = [
     {
         icon: Building2,
         title: "🏠 Residential House Cleaning Miami",
-        description: "Your home should be your retreat, not another chore on your to-do list. Our residential house cleaning in Miami covers every inch of your living space with precision and care. /n What we cover:
-/nFull kitchen cleaning, countertops, stovetop, sink, exterior appliances/n
-Bathroom sanitization toilets, showers, tubs, mirrors, floors
-Bedroom dusting, vacuuming, and linen changes (on request)
-Living area dusting, wiping, and floor care
-Interior windows, baseboards, and light switches
-Available as one-time, weekly, bi-weekly, or monthly visits.
-"
+        description: "Full kitchen cleaning, bathrooms, bedrooms, living areas, interior windows, and more. Available one-time, weekly, bi-weekly, or monthly."
     },
     {
         icon: Home,
@@ -46,7 +39,7 @@ Available as one-time, weekly, bi-weekly, or monthly visits.
         description: "Exterior cleaning for driveways, walkways, and buildings."
     },
     {
-        icon: Home, // Reusing icons is fine or import new ones
+        icon: Home,
         title: "Window Cleaning",
         description: "Interior and exterior window cleaning for a streak-free shine."
     },
@@ -57,18 +50,81 @@ Available as one-time, weekly, bi-weekly, or monthly visits.
     },
 ]
 
+const detailedServices = [
+    {
+        emoji: "🏠",
+        title: "Residential House Cleaning Miami",
+        intro: "Your home should be your retreat, not another chore on your to-do list. Our residential house cleaning in Miami covers every inch of your living space with precision and care.",
+        listLabel: "What we cover:",
+        listItems: [
+            "Full kitchen cleaning, countertops, stovetop, sink, exterior appliances",
+            "Bathroom sanitization — toilets, showers, tubs, mirrors, floors",
+            "Bedroom dusting, vacuuming, and linen changes (on request)",
+            "Living area dusting, wiping, and floor care",
+            "Interior windows, baseboards, and light switches",
+        ],
+        footer: "Available as one-time, weekly, bi-weekly, or monthly visits.",
+    },
+    {
+        emoji: "🏢",
+        title: "Commercial & Office Cleaning Miami",
+        intro: "A clean workplace isn't a luxury — it's a business necessity. Studies show that employees in clean environments are up to 15% more productive and take fewer sick days. Our commercial cleaning services in Miami keep your workplace professional, hygienic, and welcoming without disrupting your operations.",
+        listLabel: "We serve:",
+        listItems: [
+            "Corporate offices and coworking spaces",
+            "Medical, dental, and healthcare facilities",
+            "Retail shops and showrooms",
+            "Restaurants and hospitality venues",
+            "Gyms and wellness centers",
+            "Schools and childcare facilities",
+        ],
+        footer: "We work evenings, weekends, and before business hours — on your schedule.",
+    },
+    {
+        emoji: "🔍",
+        title: "Deep Cleaning Services Miami",
+        intro: "When a standard clean just won't cut it, our deep cleaning service goes where others don't. We target grout lines, behind appliances, inside cabinets, ceiling fans, window tracks, and every overlooked corner that accumulates months of buildup.",
+        listLabel: "Perfect for:",
+        listItems: [
+            "First-time professional cleaning clients",
+            "Post-renovation or construction cleanup",
+            "Pre- and post-event cleaning",
+            "Seasonal spring or end-of-year cleans",
+        ],
+        footer: null,
+    },
+    {
+        emoji: "📦",
+        title: "Move-In / Move-Out Cleaning Miami",
+        intro: "Moving is stressful. Let us handle the cleaning so you can focus on the transition. Our move-in/move-out cleaning is one of the most requested services across Miami's high-turnover rental market — from Edgewater condos to Kendall family homes.",
+        listLabel: null,
+        listItems: [],
+        footer: "We clean every surface, cabinet, appliance, and floor so the property is spotless — giving landlords peace of mind and helping tenants secure their full security deposits.",
+    },
+    {
+        emoji: "🌿",
+        title: "Green & Eco-Friendly Cleaning",
+        intro: "We care about your family's health and South Florida's environment. Our eco-friendly cleaning packages use non-toxic, biodegradable, EPA-certified products that are safe for children, pets, and those with allergies — without compromising on results.",
+        listLabel: null,
+        listItems: [],
+        footer: null,
+    },
+]
+
 export default function ServicesSection() {
     return (
         <section className="py-20 bg-gray-50">
             <div className="container mx-auto px-6">
+                {/* Section Header */}
                 <div className="text-center max-w-2xl mx-auto mb-16">
                     <span className="text-primary font-semibold uppercase tracking-wide">Our Services</span>
                     <h2 className="text-3xl md:text-4xl font-bold mt-2 text-primary">Our Same-Day Cleaning Services in Miami Include</h2>
                     <p className="mt-4 text-muted-foreground">
-                    Whether you need a one-time refresh or ongoing professional maintenance, we have a cleaning solution tailored to your needs.
+                        Whether you need a one-time refresh or ongoing professional maintenance, we have a cleaning solution tailored to your needs.
                     </p>
                 </div>
 
+                {/* Services Grid */}
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
                     {services.map((service, index) => (
                         <div key={index} className="bg-white p-8 rounded-2xl shadow-sm border border-gray-100 hover:shadow-md transition-shadow group">
@@ -85,6 +141,52 @@ export default function ServicesSection() {
                 </div>
 
                 <div className="mt-12 text-center">
+                    <Link href="/book">
+                        <Button size="lg">Book a Service Now</Button>
+                    </Link>
+                </div>
+
+                {/* ─── Detailed Service Descriptions ─── */}
+                <div className="mt-24 space-y-12">
+                    {detailedServices.map((service, index) => (
+                        <div
+                            key={index}
+                            className="bg-white rounded-2xl shadow-sm border border-gray-100 p-8 md:p-10"
+                        >
+                            <h3 className="text-2xl font-bold text-primary mb-4">
+                                {service.emoji} {service.title}
+                            </h3>
+
+                            <p className="text-muted-foreground leading-relaxed mb-5">
+                                {service.intro}
+                            </p>
+
+                            {service.listLabel && (
+                                <p className="font-semibold text-primary mb-3">{service.listLabel}</p>
+                            )}
+
+                            {service.listItems.length > 0 && (
+                                <ul className="space-y-2 mb-5">
+                                    {service.listItems.map((item, i) => (
+                                        <li key={i} className="flex items-start gap-3 text-muted-foreground">
+                                            <span className="mt-1.5 h-2 w-2 flex-shrink-0 rounded-full bg-primary" />
+                                            {item}
+                                        </li>
+                                    ))}
+                                </ul>
+                            )}
+
+                            {service.footer && (
+                                <p className="text-muted-foreground leading-relaxed italic">
+                                    {service.footer}
+                                </p>
+                            )}
+                        </div>
+                    ))}
+                </div>
+
+                {/* Bottom CTA */}
+                <div className="mt-16 text-center">
                     <Link href="/book">
                         <Button size="lg">Book a Service Now</Button>
                     </Link>
