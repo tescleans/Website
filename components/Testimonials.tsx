@@ -99,3 +99,98 @@ export default function Testimonials({ reviews = [] }: { reviews: Review[] }) {
         </section>
     )
 }
+
+"use client"
+
+import { useState } from "react"
+import Link from "next/link"
+
+const faqs = [
+    {
+        question: "Are your cleaners background-checked?",
+        answer: "Absolutely. Every member of our team undergoes a thorough background check and identity verification before their first assignment. Your safety is our baseline, not an afterthought.",
+    },
+    {
+        question: "Do I need to be home during the cleaning?",
+        answer: "Not at all. Many of our clients provide a key or door code and go about their day. With our fully insured, vetted team, you can leave with complete confidence.",
+    },
+    {
+        question: "Do you supply your own cleaning products and equipment?",
+        answer: "Yes, we bring everything. Professional-grade vacuums, mops, microfiber cloths, and cleaning solutions are all included. You don't need to provide a single item.",
+    },
+    {
+        question: "Are your products safe for children and pets?",
+        answer: "Yes. We offer both standard and eco-friendly cleaning options. Our green products are non-toxic, biodegradable, and certified safe for kids and pets. Just let us know your preference when booking.",
+    },
+    {
+        question: "What if I'm not satisfied with the cleaning?",
+        answer: "Contact us within 24 hours of your appointment and we will return for a full re-clean at no additional charge. Our satisfaction guarantee is real — not just a tagline.",
+    },
+    {
+        question: "Can I book a recurring cleaning plan?",
+        answer: "Yes, and we recommend it. Our weekly, bi-weekly, and monthly plans come at discounted rates, include priority scheduling, and ensure you always work with the same assigned cleaning team.",
+    },
+    {
+        question: "How do I get started?",
+        answer: null, // rendered separately due to links
+    },
+]
+
+export default function FAQSection() {
+    const [openIndex, setOpenIndex] = useState<number | null>(null)
+
+    const toggle = (index: number) => {
+        setOpenIndex(openIndex === index ? null : index)
+    }
+
+    return (
+        <section className="py-20 bg-white">
+            <div className="container mx-auto px-6">
+                <div className="text-center max-w-2xl mx-auto mb-12">
+                    <span className="text-primary font-semibold uppercase tracking-wide">FAQ</span>
+                    <h2 className="text-3xl md:text-4xl font-bold mt-2 text-primary">Frequently Asked Questions About Our Miami Cleaning Services</h2>
+                </div>
+
+                <div className="max-w-3xl mx-auto space-y-3">
+                    {faqs.map((faq, index) => (
+                        <div
+                            key={index}
+                            className="bg-gray-50 border border-gray-100 rounded-2xl overflow-hidden"
+                        >
+                            <button
+                                onClick={() => toggle(index)}
+                                className="w-full text-left flex items-center justify-between px-6 py-5 gap-4"
+                            >
+                                <span className="text-primary font-semibold text-base">{faq.question}</span>
+                                <span className="flex-shrink-0 w-7 h-7 rounded-full bg-secondary/20 flex items-center justify-center text-primary font-bold text-lg transition-transform duration-200"
+                                    style={{ transform: openIndex === index ? "rotate(45deg)" : "rotate(0deg)" }}>
+                                    +
+                                </span>
+                            </button>
+
+                            {openIndex === index && (
+                                <div className="px-6 pb-5">
+                                    {faq.answer ? (
+                                        <p className="text-muted-foreground text-sm leading-relaxed">{faq.answer}</p>
+                                    ) : (
+                                        <p className="text-muted-foreground text-sm leading-relaxed">
+                                            Simply call us at{" "}
+                                            <Link href="tel:7862861850" className="text-primary font-semibold hover:underline underline-offset-4">
+                                                (786) 286-185
+                                            </Link>
+                                            , fill out our online quote form at{" "}
+                                            <Link href="https://tescleans.com/" target="_blank" className="text-primary font-semibold hover:underline underline-offset-4">
+                                                tescleans.com
+                                            </Link>
+                                            , or send us a message. We typically respond within a few hours and can often schedule within the same week.
+                                        </p>
+                                    )}
+                                </div>
+                            )}
+                        </div>
+                    ))}
+                </div>
+            </div>
+        </section>
+    )
+}
