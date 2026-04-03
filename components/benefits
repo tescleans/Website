@@ -1,0 +1,55 @@
+const benefits = [
+    {
+        emoji: "⏱",
+        title: "Time Back in Your Day",
+        description: "The average Miami professional loses 4–6 hours per week to household chores. Over a year, that's an entire month of your life. A professional cleaning service gives that time back.",
+    },
+    {
+        emoji: "🦠",
+        title: "A Genuinely Healthier Home",
+        description: "Professional cleaning removes allergens, bacteria, mold spores, and dust mites that standard household cleaning misses. In Miami's humid subtropical climate, this matters more than anywhere else.",
+    },
+    {
+        emoji: "🧠",
+        title: "Reduced Stress & Mental Clarity",
+        description: "Research consistently shows that clutter and mess increase cortisol levels. A clean, organized space supports focus, creativity, and mental well-being.",
+    },
+    {
+        emoji: "💰",
+        title: "Protection of Your Property",
+        description: "Dirt, grime, and buildup cause long-term damage to floors, grout, appliances, and surfaces. Regular professional cleaning extends the life of your home's finishes and reduces costly repairs.",
+    },
+    {
+        emoji: "🤝",
+        title: "Reliable, Accountable Service",
+        description: "With a professional company, you get consistency, accountability, and a real guarantee. That's something no amount of DIY effort can provide.",
+    },
+]
+
+export default function BenefitsSection() {
+    return (
+        <section className="py-20 bg-white">
+            <div className="container mx-auto px-6">
+                <div className="text-center max-w-2xl mx-auto mb-16">
+                    <span className="text-primary font-semibold uppercase tracking-wide">Benefits of Professional Cleaning</span>
+                    <h2 className="text-3xl md:text-4xl font-bold mt-2 text-primary">The Real Benefits of Hiring a Professional Cleaning Service in Miami</h2>
+                    <p className="mt-4 text-muted-foreground">
+                        Many people wonder: "Can't I just clean it myself?" Of course you can. But here's what professional cleaning actually gives you that DIY can't match.
+                    </p>
+                </div>
+
+                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    {benefits.map((benefit, index) => (
+                        <div key={index} className="flex items-start gap-4 bg-gray-50 p-6 rounded-2xl border border-gray-100 hover:shadow-md transition-shadow">
+                            <span className="text-3xl flex-shrink-0">{benefit.emoji}</span>
+                            <div>
+                                <h3 className="text-lg font-bold text-primary mb-2">{benefit.title}</h3>
+                                <p className="text-muted-foreground text-sm leading-relaxed">{benefit.description}</p>
+                            </div>
+                        </div>
+                    ))}
+                </div>
+            </div>
+        </section>
+    )
+}
