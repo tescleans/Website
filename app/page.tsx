@@ -23,6 +23,8 @@ export default async function Home() {
       <MissionSection />
       <RecentWork />
       <Features />
+      <Process</>
+    <OurProcess</>
       <Testimonials reviews={reviews} />
       {/* Contact Us is covered by Footer and CTA in other sections */}
     </div>
