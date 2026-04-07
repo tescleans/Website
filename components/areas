@@ -8,7 +8,7 @@ const areas = [
     "Cutler Bay", "Opa-locka", "West Miami", "Virginia Gardens",
 ]
 
-export default function ServiceAreas() {
+export default function areas() {
     return (
         <section className="py-20 bg-gray-50">
             <div className="container mx-auto px-6">
