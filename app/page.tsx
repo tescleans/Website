@@ -1,3 +1,5 @@
+export const revalidate = 0  // ← add this line
+
 import HeroSlider from "@/components/HeroSlider";
 import IntroSection from "@/components/IntroSection";
 import ServicesSection from "@/components/ServicesSection";
