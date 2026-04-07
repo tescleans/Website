@@ -6,7 +6,7 @@ import RecentWork from "@/components/RecentWork";
 import Features from "@/components/Features";
 import Testimonials from "@/components/Testimonials";
 import { getGoogleReviews } from "@/lib/getReviews";
-import Process from "@/components/Process";
+import OurProcess from "@/components/Process";
 
 
 export default async function Home() {
@@ -21,7 +21,7 @@ export default async function Home() {
       <MissionSection />
       <RecentWork />
       <Features />
-      <Process />
+      <OurProcess />
       <Testimonials reviews={reviews} />
       {/* Contact Us is covered by Footer and CTA in other sections */}
     </div>
