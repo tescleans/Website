@@ -1,4 +1,3 @@
-export const dynamic = 'force-dynamic'
 import HeroSlider from "@/components/HeroSlider";
 import IntroSection from "@/components/IntroSection";
 import ServicesSection from "@/components/ServicesSection";
@@ -7,9 +6,6 @@ import RecentWork from "@/components/RecentWork";
 import Features from "@/components/Features";
 import Testimonials from "@/components/Testimonials";
 import { getGoogleReviews } from "@/lib/getReviews";
-import OurProcess from "@/components/WhyChooseUs";
-import OurProcess from "@/components/areas";
-
 
 export default async function Home() {
   let reviews = [];
@@ -28,8 +24,6 @@ export default async function Home() {
       <MissionSection />
       <RecentWork />
       <Features />
-      <WhyChooseUs />
-      <areas />
       <Testimonials reviews={reviews} />
     </div>
   );
