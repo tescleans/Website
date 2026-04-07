@@ -1,3 +1,4 @@
+'use client'
 import { Button } from "@/components/ui/button"
 import Link from "next/link"
 
@@ -60,14 +61,11 @@ export default function OurProcess() {
                         })}
                     </div>
                 </div>
-
-                {/* CTA Button */}
                 <div className="mt-12 text-center">
                     <Link href="/book">
                         <Button size="lg">Book a Service Now</Button>
                     </Link>
                 </div>
-
             </div>
         </section>
     )
