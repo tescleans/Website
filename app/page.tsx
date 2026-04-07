@@ -8,9 +8,13 @@ import Testimonials from "@/components/Testimonials";
 import { getGoogleReviews } from "@/lib/getReviews";
 import OurProcess from "@/components/Process";
 
-
 export default async function Home() {
-  const reviews = await getGoogleReviews();
+  let reviews = [];
+  try {
+    reviews = await getGoogleReviews();
+  } catch {
+    reviews = [];
+  }
 
   return (
     <div className="flex flex-col min-h-screen">
@@ -23,8 +27,6 @@ export default async function Home() {
       <Features />
       <OurProcess />
       <Testimonials reviews={reviews} />
-      {/* Contact Us is covered by Footer and CTA in other sections */}
     </div>
   );
 }
-
