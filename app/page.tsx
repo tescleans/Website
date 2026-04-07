@@ -7,7 +7,7 @@ import RecentWork from "@/components/RecentWork";
 import Features from "@/components/Features";
 import Testimonials from "@/components/Testimonials";
 import { getGoogleReviews } from "@/lib/getReviews";
-import OurProcess from "@/components/Process";
+import OurProcess from "@/components/WhyChooseUs";
 
 export default async function Home() {
   let reviews = [];
@@ -26,7 +26,7 @@ export default async function Home() {
       <MissionSection />
       <RecentWork />
       <Features />
-      <OurProcess />
+      <WhyChooseUs />
       <Testimonials reviews={reviews} />
     </div>
   );
