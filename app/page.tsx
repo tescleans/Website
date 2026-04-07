@@ -1,3 +1,4 @@
+export const dynamic = 'force-dynamic'
 export const revalidate = 0  // ← add this line
 
 import HeroSlider from "@/components/HeroSlider";
