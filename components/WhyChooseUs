@@ -1,117 +1,98 @@
+"use client"
+
 import { Button } from "@/components/ui/button"
 import Link from "next/link"
 import { Phone } from "lucide-react"
 
 const reasons = [
-    {
-        title: "Rigorously Vetted, Trained Professionals",
-        description: "Every cleaner is background-checked, reference-verified, and trained using our proprietary cleaning protocol. You'll always know exactly who is coming into your space.",
-    },
-    {
-        title: "Our Satisfaction Guarantee: We Make It Right",
-        description: "If you're not 100% happy with any part of your clean, contact us within 24 hours and we will return at absolutely no charge. No debates. No hassle. Just results.",
-    },
-    {
-        title: "Upfront, Transparent Pricing",
-        description: "You receive a detailed written quote before we start. What you see is what you pay — always. No surprise charges, no upselling at the door, no hidden fees.",
-    },
-    {
-        title: "Consistent Teams Assigned to You",
-        description: "Unlike companies that send a different stranger every time, we assign consistent cleaning professionals to your account so you build familiarity and trust with the same faces.",
-    },
-    {
-        title: "Fully Licensed, Bonded & Insured",
-        description: "We carry complete general liability insurance and workers' compensation. You're fully protected, and so are we. This is non-negotiable for us — and should be for you too.",
-    },
-    {
-        title: "Miami-Born, Miami-Focused",
-        description: "We're not a national chain on autopilot. We understand Miami's humidity, tile floors, mold risks, and open-concept layouts — and we clean accordingly.",
-    },
+  {
+    title: "Rigorously Vetted, Trained Professionals",
+    description:
+      "Every cleaner is background-checked, reference-verified, and trained using our proprietary cleaning protocol.",
+  },
+  {
+    title: "Our Satisfaction Guarantee: We Make It Right",
+    description:
+      "If you're not 100% happy, contact us within 24 hours and we’ll fix it at no cost.",
+  },
+  {
+    title: "Upfront, Transparent Pricing",
+    description:
+      "You receive a detailed quote before we start. No hidden fees.",
+  },
+  {
+    title: "Consistent Teams Assigned to You",
+    description:
+      "We assign consistent professionals so you build trust with the same team.",
+  },
+  {
+    title: "Fully Licensed, Bonded & Insured",
+    description:
+      "Complete coverage for your peace of mind.",
+  },
+  {
+    title: "Miami-Born, Miami-Focused",
+    description:
+      "We understand Miami homes and clean accordingly.",
+  },
 ]
 
 export default function WhyChooseUs() {
-    return (
-        <>
-            {/* Why Choose Us Section */}
-            <section className="py-20 bg-white">
-                <div className="container mx-auto px-6">
-                    <div className="text-center max-w-2xl mx-auto mb-16">
-                        <span className="text-primary font-semibold uppercase tracking-wide">Why Choose Us</span>
-                        <h2 className="text-3xl md:text-4xl font-bold mt-2 text-primary">Why Miami Chooses Total Excellence Services, Inc</h2>
-                        <p className="mt-4 text-muted-foreground">
-                            There's no shortage of cleaning companies in Miami. So what makes us different? Here's what our clients tell us keeps them coming back.
-                        </p>
-                    </div>
-                    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                        {reasons.map((reason, index) => (
-                            <div key={index} className="flex items-start gap-4 bg-gray-50 p-6 rounded-2xl border border-gray-100 hover:shadow-md transition-shadow">
-                                <span className="text-2xl mt-0.5 flex-shrink-0">✅</span>
-                                <div>
-                                    <h3 className="text-lg font-bold text-primary mb-2">{reason.title}</h3>
-                                    <p className="text-muted-foreground text-sm leading-relaxed">{reason.description}</p>
-                                </div>
-                            </div>
-                        ))}
-                    </div>
+  return (
+    <>
+      {/* Section */}
+      <section className="py-20 bg-white">
+        <div className="container mx-auto px-6">
+          <div className="text-center max-w-2xl mx-auto mb-16">
+            <h2 className="text-3xl md:text-4xl font-bold text-primary">
+              Why Choose Us
+            </h2>
+          </div>
+
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {reasons.map((reason, index) => (
+              <div
+                key={index}
+                className="flex gap-4 bg-gray-50 p-6 rounded-2xl border"
+              >
+                <span>✅</span>
+                <div>
+                  <h3 className="font-bold">{reason.title}</h3>
+                  <p className="text-sm text-muted-foreground">
+                    {reason.description}
+                  </p>
                 </div>
-            </section>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
 
-            {/* CTA Section */}
-            <section className="py-20 bg-primary text-white">
-                <div className="container mx-auto px-6">
-                    <div className="max-w-4xl mx-auto text-center">
+      {/* CTA */}
+      <section className="py-20 bg-primary text-white text-center">
+        <h2 className="text-3xl md:text-5xl font-bold mb-6">
+          Ready to Get Started?
+        </h2>
 
-                        {/* Heading */}
-                        <h2 className="text-3xl md:text-5xl font-bold mb-6 leading-tight">
-                            Ready to Experience Miami's Best Professional Cleaning Service?
-                        </h2>
-                        <p className="text-white/80 text-lg mb-4">
-                            Your home and workspace deserve the best, and so do you.
-                        </p>
-                        <p className="text-white/70 text-base mb-10 max-w-2xl mx-auto">
-                            Whether you're looking for a reliable house cleaning service in Miami, a trusted commercial cleaning company, or a one-time deep clean that restores your space to its best — Total Excellence Services, Inc is ready to deliver. We make it simple. We make it trustworthy. And we make it spotless.
-                        </p>
+        <div className="flex flex-col sm:flex-row gap-4 justify-center">
 
-                        {/* Special Offer Badge */}
-                        <div className="inline-block bg-white/10 border border-white/20 rounded-2xl px-6 py-4 mb-10">
-                            <p className="text-yellow-300 font-bold text-lg">🎉 First-Time Client Special</p>
-                            <p className="text-white/90 text-sm mt-1">Up to 20% Off · Free Room · Add-On Service</p>
-                        </div>
+          {/* FIX 1: asChild used */}
+          <Button asChild size="lg" className="bg-white text-primary font-bold">
+            <a href="tel:7862861851">
+              <Phone className="h-5 w-5 mr-2" />
+              Call Now
+            </a>
+          </Button>
 
-                        {/* CTA Buttons */}
-                        <div className="flex flex-col sm:flex-row gap-4 justify-center mb-10">
-                            <a href="tel:7862861851">
-                                <Button size="lg" className="bg-white text-primary hover:bg-white/90 font-bold w-full sm:w-auto gap-2">
-                                    <Phone className="h-5 w-5" />
-                                    Call Now: (786) 286-1851
-                                </Button>
-                            </a>
-                            <Link href="https://tescleans.com/">
-                                <Button size="lg" variant="outline" className="border-white text-white hover:bg-white hover:text-primary font-bold w-full sm:w-auto">
-                                    Request a Free Quote
-                                </Button>
-                            </Link>
-                        </div>
+          {/* FIX 2: Link wrapped correctly */}
+          <Button asChild size="lg" variant="outline" className="border-white">
+            <Link href="/contact">
+              Request Quote
+            </Link>
+          </Button>
 
-                        {/* Info Strip */}
-                        <div className="flex flex-wrap justify-center gap-4 text-white/70 text-sm mb-10">
-                            <span>📍 Serving All of Miami-Dade County</span>
-                            <span>•</span>
-                            <span>📅 7 Days a Week</span>
-                        </div>
-
-                        {/* Trust Badges */}
-                        <div className="flex flex-wrap justify-center gap-3">
-                            {["Licensed", "Bonded", "Insured", "5-Star Rated", "Miami's Most Trusted"].map((badge) => (
-                                <span key={badge} className="bg-white/10 border border-white/20 rounded-full px-4 py-1.5 text-sm text-white/90 font-medium">
-                                    ✓ {badge}
-                                </span>
-                            ))}
-                        </div>
-
-                    </div>
-                </div>
-            </section>
-        </>
-    )
+        </div>
+      </section>
+    </>
+  )
 }
